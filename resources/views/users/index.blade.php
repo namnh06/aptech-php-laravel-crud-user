@@ -1,4 +1,4 @@
-@extends('layout.master') 
+@extends('layout.master')
 @section('content')
 <div class="container">
   <div class="row">
@@ -41,6 +41,7 @@
           @endforeach
         </tbody>
       </table>
+      <div class="d-flex justify-content-center">{{$users->links()}}</div>
     </div>
   </div>
 </div>
