@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use App\User;
 use Faker\Factory as Faker;
+use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
 {
@@ -15,11 +15,11 @@ class UsersTableSeeder extends Seeder
     {
         //
         $faker = Faker::create();
-        foreach (range(0, 1000) as $index) {
+        foreach (range(0, 20) as $index) {
             User::create([
                 'name' => $faker->name,
                 'email' => $faker->safeEmail,
-                'password' => $faker->password
+                'password' => $faker->password,
             ]);
         }
     }
