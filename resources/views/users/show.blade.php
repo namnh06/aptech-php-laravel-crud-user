@@ -1,9 +1,9 @@
 @extends('layout.master') 
-@section('content')
-<div class="container">
+@section('content') @component('layout.components.title') show page @endcomponent
+<div class="container mt-3">
   <div class="row">
     <div class="col-12">
-      <h3 class="text-uppercase">show page</h3>
+
       <table class="table table-hover table-bordered">
         <thead class="">
           <tr class="text-center">

@@ -1,9 +1,8 @@
 @extends('layout.master') 
-@section('content')
-<div class="container">
+@section('content') @component('layout.components.title') index page @endcomponent
+<div class="container mt-3">
   <div class="row">
     <div class="col-12">
-      <h3 class="text-uppercase">index page</h3>
       <table class="table table-hover table-bordered">
         <thead>
           <tr class="text-center">
