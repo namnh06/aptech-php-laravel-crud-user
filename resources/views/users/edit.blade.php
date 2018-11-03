@@ -1,9 +1,8 @@
 @extends('layout.master') 
-@section('content')
-<div class="container">
+@section('content') @component('layout.components.title') edit page @endcomponent
+<div class="container mt-3">
   <div class="row">
     <div class="col-12 ">
-      <h3 class="text-uppercase">edit page</h3>
       <form action="{{route('users.update',$user->id)}}" method="post">
         <input type="hidden" name="_method" value="put" /> {{csrf_field()}}
         <div class="form-group ">

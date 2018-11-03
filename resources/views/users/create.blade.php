@@ -1,9 +1,8 @@
 @extends('layout.master') 
-@section('content')
-<div class="container">
+@section('content') @component('layout.components.title') create page @endcomponent
+<div class="container mt-3">
   <div class="d-flex flex-row">
     <div class="col-12 px-0">
-      <h3 class="text-uppercase">create page</h3>
       <form action="{{route('users.store')}}" method="post">
         <input type="hidden" name="_method" value="post" /> {{csrf_field()}}
         <div class="form-group ">
