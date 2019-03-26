@@ -15,11 +15,11 @@ class UsersTableSeeder extends Seeder
     {
         //
         $faker = Faker::create();
-        foreach (range(0, 20) as $index) {
+        foreach (range(1, 10) as $index) {
             User::create([
                 'name' => $faker->name,
-                'email' => $faker->safeEmail,
-                'password' => $faker->password,
+                'email' => $faker->safeEmail(),
+                'password' => bcrypt('123'),
             ]);
         }
     }

@@ -1,4 +1,5 @@
-# APTECH PHP LARAVEL CRUD
+# PHP LARAVEL CRUD
+
 1. Truy cập vào C:/xampp/htdocs, bật git bash và clone repository bằng câu lệnh : `git clone https://github.com/namnh06/aptech-php-laravel-crud.git`
 2. Khởi động XAMPP.
 3. Truy cập vào repository aptech-php-laravel-crud và sử dụng câu lệnh : `composer install` để cài đặt.
