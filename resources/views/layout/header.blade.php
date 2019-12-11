@@ -8,7 +8,9 @@
           </form>
         </div>
         <div class="col-10">
-          <h1 class="text-center font-weight-bold text-uppercase">laravel crud users demo</h1>
+          <h1 class="text-center font-weight-bold text-uppercase">
+            user crud laravel
+          </h1>
         </div>
         <div class="col-1"></div>
       </div>

@@ -1,9 +1,11 @@
-@extends('layout.master') 
-@section('content') @component('layout.components.title') show page @endcomponent
+@extends('layout.master')
+@section('content')
+@component('layout.components.title')
+show page
+@endcomponent
 <div class="container mt-3">
   <div class="row">
     <div class="col-12">
-
       <table class="table table-hover table-bordered">
         <thead class="">
           <tr class="text-center">
@@ -31,7 +33,8 @@
                 </button>
               </form>
               <form action="{{route('users.destroy',$user->id)}}" method="post">
-                <input type="hidden" name="_method" value="delete" /> {{csrf_field()}}
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <input type="hidden" name="_method" value="delete">
                 <button class="btn btn-sm btn-danger mx-2 rounded-0">
                   Delete
                 </button>

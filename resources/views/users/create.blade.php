@@ -1,10 +1,13 @@
-@extends('layout.master') 
-@section('content') @component('layout.components.title') create page @endcomponent
+@extends('layout.master')
+@section('content')
+@component('layout.components.title')
+create page
+@endcomponent
 <div class="container mt-3">
   <div class="d-flex flex-row">
     <div class="col-12 px-0">
       <form action="{{route('users.store')}}" method="post">
-        <input type="hidden" name="_method" value="post" /> {{csrf_field()}}
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
         <div class="form-group ">
           <label class="text-uppercase font-weight-bold" for="name">name</label>
           <input type="text" class="form-control rounded-0" id="name" placeholder="Name" name="name">

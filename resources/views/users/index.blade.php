@@ -1,5 +1,8 @@
-@extends('layout.master') 
-@section('content') @component('layout.components.title') index page @endcomponent
+@extends('layout.master')
+@section('content')
+@component('layout.components.title')
+index page
+@endcomponent
 <div class="container mt-3">
   <div class="row">
     <div class="col-12">
@@ -20,18 +23,19 @@
             <td>{{$user->email}}</td>
             <td class="d-flex align-items-center justify-content-around">
               <form action="{{route('users.show',$user->id)}}" method="get">
-                <button class="btn btn-sm btn-primary   rounded-0">
+                <button class="btn btn-sm btn-primary rounded-0">
                   Show
                 </button>
               </form>
               <form action="{{route('users.edit',$user->id)}}" method="get">
-                <button class="btn btn-sm btn-warning   rounded-0">
+                <button class="btn btn-sm btn-warning rounded-0">
                   Edit
                 </button>
               </form>
               <form action="{{route('users.destroy',$user->id)}}" method="post">
-                <input type="hidden" name="_method" value="delete" /> {{csrf_field()}}
-                <button class="btn btn-sm btn-danger   rounded-0">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <input type="hidden" name="_method" value="delete">
+                <button class="btn btn-sm btn-danger rounded-0">
                   Delete
                 </button>
               </form>
